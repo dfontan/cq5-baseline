@@ -6,7 +6,7 @@
     <!-- ====================================================================== -->
 
     <groupId>com.baseline.web</groupId>
-    <artifactId>Baseline Project</artifactId>
+    <artifactId>Baseline</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
