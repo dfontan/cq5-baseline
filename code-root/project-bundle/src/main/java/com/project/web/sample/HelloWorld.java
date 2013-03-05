@@ -1,4 +1,4 @@
-package com.baseline.web.sample;
+package com.project.web.sample;
 
 public class HelloWorld {
 	public static String hw() {
