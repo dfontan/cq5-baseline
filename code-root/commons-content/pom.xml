@@ -46,7 +46,7 @@
                 	<group>Commons</group>
             	    <filters>
                         <filter>
-                            <root>/apps/commons</root>
+                            <root>/apps/commons-content</root>
                         </filter>
 						<filter>
 							<root>/apps/foundation</root>
@@ -58,17 +58,17 @@
 							<root>/etc/clientcontext/default</root>
 						</filter>
 						<filter>
-							<root>/etc/clientlibs/commons</root>
+							<root>/etc/clientlibs/commons-content</root>
 						</filter>
 						<filter>
-							<root>/etc/designs/commons</root>
+							<root>/etc/designs/commons-content</root>
 						</filter>
                     </filters>
                     <embeddeds>
                         <embedded>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>commons-bundle</artifactId>
-                            <target>/apps/commons/install</target>
+                            <target>/apps/commons-content/install</target>
                         </embedded>
                     </embeddeds>
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>

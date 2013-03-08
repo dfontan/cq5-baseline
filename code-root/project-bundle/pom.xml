@@ -52,7 +52,7 @@
                 <configuration>
 					<userId>${crx.user}</userId>
 					<password>${crx.password}</password>
-                    <slingUrl>http://${crx.host}:${crx.port}/apps/project/install</slingUrl>
+                    <slingUrl>http://${crx.host}:${crx.port}/apps/base-project/install</slingUrl>
                     <usePut>true</usePut>
                 </configuration>
             </plugin>

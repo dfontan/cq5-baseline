@@ -48,15 +48,22 @@
                     <group>Baseline Project</group>
                     <filters>
                         <filter>
-                            <root>/apps/base-project</root>
+                            <root>/apps/project-content</root>
                         </filter>
 						<filter>
-							<root>/etc/clientlibs/base-project</root>
+							<root>/etc/clientlibs/project-content</root>
 						</filter>
 						<filter>
-							<root>/etc/designs/base-project</root>
+							<root>/etc/designs/project-content</root>
 						</filter>
                     </filters>
+                 	<embeddeds>
+                        <embedded>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>project-bundle</artifactId>
+                            <target>/apps/project-content/install</target>
+                        </embedded>
+                    </embeddeds>                 
                     <targetURL>http://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                 </configuration>
             </plugin>
