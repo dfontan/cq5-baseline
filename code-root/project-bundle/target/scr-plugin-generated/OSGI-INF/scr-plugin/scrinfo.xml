@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" immediate="true" name="com.project.web.sample.CleanupServiceImpl">
+        <implementation class="com.project.web.sample.CleanupServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="java.lang.Runnable"/>
+        </service>
+        <property name="scheduler.expression" type="String" value="*/5 * * * * ?" private="false"/>
+        <property name="cleanupPath" type="String" value="/mypath" private="false"/>
+        <property name="service.pid" value="com.project.web.sample.CleanupServiceImpl" private="false"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.project.web.sample.MySafeServletMethod">
+        <implementation class="com.project.web.sample.MySafeServletMethod"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/bin/company/repo" private="false"/>
+        <property name="sling.servlet.methods" value="GET" private="false"/>
+        <property name="service.pid" value="com.project.web.sample.MySafeServletMethod" private="false"/>
+        <reference name="repository" interface="javax.jcr.Repository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository" checked="true" strategy="event"/>
+    </scr:component>
+</components>
